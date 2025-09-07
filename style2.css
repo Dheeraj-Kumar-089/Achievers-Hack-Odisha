@@ -718,7 +718,7 @@ nav a:hover::after {
         top: 60px;
         left: 0;
         width: 100%;
-        background: white;
+        background: black;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
