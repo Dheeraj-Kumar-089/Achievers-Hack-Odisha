@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="https://png.pngtree.com/png-vector/20230327/ourmid/pngtree-odisha-day-utkal-divas-foundation-vector-png-image_6671119.png"
+                alt="TourOdisha Logo">
+            <span>TourOdisha</span>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+
+            <div class="search-bar">
+                <span class="nav-icon">🔍</span>
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="#favorites" class="nav-icon">❤️ Favorites</a>
+            <div class="dropdown">
+                <span class="nav-icon">🌐 Language</span>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">Hindi</a>
+                    <a href="#">Odia</a>
+                </div>
+            </div>
+
+            <a href="/login" id="login-link" class="nav-icon">👤 Login</a>
+
+            <button id="logout-button" class="nav-icon hidden bg-transparent border-none cursor-pointer">🚪
+                Logout</button>
+
+            <a href="/home">🏠 Home</a>
+            <div class="dropdown">
+                <div class="more-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="dropdown-content">
+
+
+
+                    <a href="/Culture">Culture</a>
+                    <a href="/heritage">Heritage</a>
+                    <a href="/wildlife">Wildlife</a>
+
+                    <a href="/safety">Tourist Support</a>
+                    <a href="/contactus">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <div class="contact-sections-wrapper">
+            <div class="reach-out-container">
+                <div class="section-header">
+                    <h2>Reach Out</h2>
+                </div>
+                <div class="contact-info-list">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-details">
+                            <h3>Landline</h3>
+                            <p>1800-12-0900</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h3>Emails & Support</h3>
+                            <p>info.oda@gov.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p> Botanical Garden, Howrah, WestBengal - 711103</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inquire-about-container">
+                <div class="section-header">
+                    <h2>Inquire About</h2>
+                </div>
+                <form action="#" method="post" class="inquire-form">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="inquiry_type" value="partnership"> Partnership opportunities
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="inquiry_type" value="media_press"> Media/Press
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="inquiry_type" value="general_interest"> General Interest
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="inquiry_type" value="feedback"> Feedback
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="inquire_name" name="inquire_name" placeholder="Name*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="surname" name="surname" placeholder="Surname*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="organization" name="organization" placeholder="Organization*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="inquire_email" name="inquire_email" placeholder="Email address*"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="inquire_message" name="inquire_message" rows="5"
+                            placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="inquire-submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="odisha-footer">
+        <div class="footer-background-image"></div>
+        <div class="footer-content">
+            <div class="footer-column logo-and-social">
+                <h2>Follow us</h2>
+                <div class="social-links-new">
+                    <a href="https://www.instagram.com/aaditya_raj_2310?igsh=enRtZmpvN3RnZTV4"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Aaditya_raj_70?t=qvI4FEr3TKf1D2lPsHRWow&s=09"><i
+                            class="fab fa-twitter"></i></a>
+                    <a
+                        href="https://www.linkedin.com/in/aaditya-raj-32b695318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column quick-links">
+                <h2>Quick links</h2>
+                <ul>
+                    <li><a href="#">Attractions</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Festivals and Events</a></li>
+                    <li><a href="#">TourOdisha</a></li>
+                    <li><a href="#">Content Hub</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD5MTk-4actUrdjNP5eqwJvjWDdm86Uhe0",
+            authDomain: "hack-odisha-c3159.firebaseapp.com",
+            databaseURL: "https://hack-odisha-c3159-default-rtdb.firebaseio.com",
+            projectId: "hack-odisha-c3159",
+            storageBucket: "hack-odisha-c3159.firebasestorage.app",
+            messagingSenderId: "745109721356",
+            appId: "1:745109721356:web:9cb78e4fce74c44d13f929",
+            measurementId: "G-KD2NCGYNK6"
+        };
+
+
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        const loginLink = document.getElementById('login-link');
+        const logoutButton = document.getElementById('logout-button');
+
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+
+                loginLink.classList.add('hidden');
+                logoutButton.classList.remove('hidden');
+            } else {
+                loginLink.classList.remove('hidden');
+                logoutButton.classList.add('hidden');
+            }
+        });
+
+        logoutButton.addEventListener('click', () => {
+            auth.signOut().then(() => {
+                alert('You have been successfully logged out.');
+                window.location.href = '/home';
+            }).catch((error) => {
+                alert(`Error during logout: ${error.message}`);
+            });
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

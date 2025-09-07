@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odisha Heritage - Timeless Treasures</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="heritage.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="text-gray-900 font-poppins">
+
+
+  <nav>
+    <div class="nav-logo">
+      <img
+        src="https://png.pngtree.com/png-vector/20230327/ourmid/pngtree-odisha-day-utkal-divas-foundation-vector-png-image_6671119.png"
+        alt="TourOdisha Logo">
+      <span>TourOdisha</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <div class="nav-links">
+
+      <div class="search-bar">
+        <span class="nav-icon">🔍</span>
+        <input type="text" placeholder="Search...">
+      </div>
+      <a href="#favorites" class="nav-icon">❤️ Favorites</a>
+      <div class="dropdown">
+        <span class="nav-icon">🌐 Language</span>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">Hindi</a>
+          <a href="#">Odia</a>
+        </div>
+      </div>
+      <a href="/login" id="login-link" class="nav-icon">👤 Login</a>
+      <button id="logout-button" class="nav-icon hidden bg-transparent border-none cursor-pointer">🚪 Logout</button>
+      <a href="/home">🏠 Home</a>
+      <div class="dropdown">
+        <div class="more-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="dropdown-content">
+
+
+
+          <a href="/Culture">Culture</a>
+          <a href="/heritage">Heritage</a>
+          <a href="/wildlife">Wildlife</a>
+
+          <a href="/safety">Tourist Support</a>
+          <a href="/contactus">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <h1 class="title">🏛 Odisha Heritage</h1>
+    <p class="subtitle">Explore the timeless treasures of Odisha — from temples to wildlife sanctuaries, rivers to
+      traditions.</p>
+
+  </section>
+
+
+  <div class="design">
+    <section class="heritage-section">
+      <h2 class="section-title">📜 Glorious History</h2>
+      <div class="card-grid">
+        <div class="heritage-card">
+          <img src="https://i.pinimg.com/736x/0c/1a/38/0c1a3834abc71dff9ed30e5122485ae0.jpg" alt="Kalinga War">
+          <div class="card-info">
+            <h3>Kalinga War & Ashoka</h3>
+            <p>The famous Kalinga war (261 BCE) changed Emperor Ashoka, spreading Buddhism across Asia.
+              Region: <span class="region">Dhauli Hills, Bhubaneswar</span></p>
+          </div>
+        </div>
+        <div class="heritage-card">
+          <img
+            src="https://s7ap1.scene7.com/is/image/incredibleindia/khandagiri-udaigiri-caves-2-musthead-hero?qlt=82&ts=1742166007936"
+            alt="Udayagiri Caves">
+          <div class="card-info">
+            <h3>Udayagiri & Khandagiri Caves</h3>
+            <p>Ancient Jain rock-cut caves from 2nd century BCE with carvings of daily life.
+              Region: <span class="region">Bhubaneswar</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heritage-section bg-gray-50">
+      <h2 class="section-title">⛩ Temples & Monuments</h2>
+      <div class="card-grid">
+        <div class="heritage-card">
+          <img src="https://assets.cntraveller.in/photos/65a4ca16f4f38543f111ce6d/4:3/w_4608,h_3456,c_limit/1444924249"
+            alt="Konark Sun Temple">
+          <div class="card-info">
+            <h3>Konark Sun Temple</h3>
+            <p>A UNESCO site, built as a giant stone chariot.
+              Region: <span class="region">Konark, Puri</span></p>
+          </div>
+        </div>
+        <div class="heritage-card">
+          <img src="https://static.toiimg.com/thumb/85762625/Lingraj-Temple-Reopen.jpg?width=1200&height=900"
+            alt="Lingaraj Temple">
+          <div class="card-info">
+            <h3>Lingaraj Temple</h3>
+            <p>Magnificent 11th-century Shiva temple, center of Kalinga architecture.
+              Region: <span class="region">Bhubaneswar</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heritage-section">
+      <h2 class="section-title">🛕 Buddhist Heritage of Odisha</h2>
+      <div class="card-grid">
+        <div class="heritage-card">
+          <img src="https://www.insightsonindia.com/wp-content/uploads/2025/02/Heritage.jpg"
+            alt="Simlipal Tiger Reserve">
+          <div class="card-info">
+            <h3> Ratnagiri</h3>
+            <p> Odisha is home to the famous <strong>Diamond Triangle</strong> – Ratnagiri–
+              which reflect its glorious Buddhist past with monasteries, stupas, and sculptures.
+              <span class="region">Ratnagiri</span>
+            </p>
+          </div>
+        </div>
+        <div class="heritage-card">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjP8-f9OiW_c4WiNHQKiZjub4w62HoPIdwjfFyMxLhLuipwUDaX-TCTwV9BT7tjzRNeN5vGfv_1xPqREgnqFxU0pXmvw5Nf1rsNew7P0v47XL4fdrJm__uIXwCyTkJnDeCGEe_dX1t1b6E/s1600/lalitgiri-Buddhist+site-Odisha,India.jpg"
+            alt="Olive Ridley Turtles">
+          <div class="card-info">
+            <h3>Lalitgiri</h3>
+            <p>One of the oldest Buddhist sites in Odisha, famous for stupas and relic caskets linked to Lord Buddha.
+              <span class="region">Lalitgiri</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="heritage-section bg-gray-50">
+      <h2 class="section-title">🌊 Rivers & Aquatic Life</h2>
+      <div class="card-grid">
+        <div class="heritage-card">
+          <img
+            src="https://media1.thrillophilia.com/filestore/xj9eeyntpk1xhbsm2t5wh1168nkk_1592315366_shutterstock_1025204920_(2).jpg"
+            alt="Chilika Lake">
+          <div class="card-info">
+            <h3>Chilika Lake</h3>
+            <p>Asia’s largest brackish lagoon, home to dolphins & migratory birds.
+              Region: <span class="region">Puri, Khurda, Ganjam</span></p>
+          </div>
+        </div>
+        <div class="heritage-card">
+          <img src="https://currentaffairs.chinmayaias.com/wp-content/uploads/2024/12/mah-1.webp" alt="Mahanadi River">
+          <div class="card-info">
+            <h3>Mahanadi River</h3>
+            <p>The lifeline of Odisha, supporting irrigation, culture, and festivals.
+              Region: <span class="region">Cuttack, Sambalpur</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="heritage-map reveal">
+    <h2>🗺️ Odisha Heritage Map</h2>
+    <div class="map-container">
+      <img src="https://www.mapsofindia.com/maps/orissa/odisha-index-map.jpg" alt="Odisha Map" class="map-img">
+
+      <div class="marker" style="top: 65%; left: 55%;" data-title="Konark Sun Temple"
+        data-info="World Heritage Site in Puri district, 13th century marvel."></div>
+
+      <div class="marker" style="top: 70%; left: 50%;" data-title="Jagannath Temple, Puri"
+        data-info="Spiritual heart of Odisha, famous for Rath Yatra."></div>
+
+      <div class="marker" style="top: 60%; left: 50%;" data-title="Lingaraj Temple, Bhubaneswar"
+        data-info="11th century Shaivite temple, architectural gem."></div>
+
+      <div class="marker" style="top: 30%; left: 40%;" data-title="Simlipal Tiger Reserve"
+        data-info="Home to tigers, elephants & orchids, Mayurbhanj district."></div>
+
+      <div class="marker" style="top: 75%; left: 45%;" data-title="Chilika Lake"
+        data-info="Asia’s largest lagoon, famous for Irrawaddy dolphins & migratory birds."></div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+  </section>
+
+
+  <footer class="text-center py-6 bg-orange-600 text-white mt-12 " style="color:black;">
+    <p>🌏 Incredible Odisha Heritage • Preserving Timeless Culture</p>
+  </footer>
+
+  <script src="/script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5MTk-4actUrdjNP5eqwJvjWDdm86Uhe0",
+      authDomain: "hack-odisha-c3159.firebaseapp.com",
+      databaseURL: "https://hack-odisha-c3159-default-rtdb.firebaseio.com",
+      projectId: "hack-odisha-c3159",
+      storageBucket: "hack-odisha-c3159.firebasestorage.app",
+      messagingSenderId: "745109721356",
+      appId: "1:745109721356:web:9cb78e4fce74c44d13f929",
+      measurementId: "G-KD2NCGYNK6"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const loginLink = document.getElementById('login-link');
+    const logoutButton = document.getElementById('logout-button');
+
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+
+        loginLink.classList.add('hidden');
+        logoutButton.classList.remove('hidden');
+      } else {
+        loginLink.classList.remove('hidden');
+        logoutButton.classList.add('hidden');
+      }
+    });
+
+    logoutButton.addEventListener('click', () => {
+      auth.signOut().then(() => {
+        alert('You have been successfully logged out.');
+        window.location.href = '/home';
+      }).catch((error) => {
+        alert(`Error during logout: ${error.message}`);
+      });
+    });
+
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+
+</body>
+
+</html>

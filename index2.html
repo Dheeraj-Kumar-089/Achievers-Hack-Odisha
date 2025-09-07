@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Safety - Discover Odisha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&family=Winky+Rough&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Saira', sans-serif; }
+    h1, h2, h3 { font-family: 'Winky Rough', cursive; }
+    .btn-animated {
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .btn-animated:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(255,0,0,0.7);
+      background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
+      color: white;
+    }
+    .sos-btn {
+      animation: pulse 1.5s infinite;
+      background: linear-gradient(90deg, #ff0000, #ff6666);
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 20px rgba(255,0,0,0.6);
+      border: none;
+      cursor: pointer;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 10px rgba(255,0,0,0.5); }
+      50% { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,0,0,0.9); }
+      100% { transform: scale(1); box-shadow: 0 0 10px rgba(255,0,0,0.5); }
+    }
+    .call-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="flex justify-between items-center p-6 bg-yellow-500 text-white">
+    <h1 class="text-3xl font-bold">Helpline</h1>
+     <a href="/home" style="font-weight:bold;font-size: 20px;">🏠 Home</a>
+  </nav>
+
+  <section class="text-center py-16 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200">
+    <h2 class="text-5xl mb-4">Your Safety is Our Priority</h2>
+    <p class="mb-8 text-lg">Explore Odisha confidently with emergency support at your fingertips.</p>
+    <button class="sos-btn" id="sos-btn">🚨 SOS</button>
+    <audio id="sos-sound" src="siren.mp3"></audio>
+  </section>
+
+  <section class="max-w-4xl mx-auto my-12 p-8 bg-white rounded-xl shadow-lg">
+    <h2 class="text-3xl mb-6 text-center">Report a Problem</h2>
+    <form class="space-y-4" id="report-form">
+      <input type="text" placeholder="Your Name" id="name" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <input type="text" placeholder="Phone No." id="phone" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400" inputmode="numeric" pattern="[0-9]*" required />
+      <select id="issue-type" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+        <option value="">Type of Issue</option>
+        <option>Lost Item</option>
+        <option>Harassment</option>
+        <option>Medical</option>
+        <option>Other</option>
+      </select>
+      <textarea id="description" placeholder="Description" class="hidden w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+      <button type="submit" class="btn-animated w-full py-3 text-lg bg-yellow-500 text-white rounded">Submit Report</button>
+    </form>
+  </section>
+
+  
+  <section class="max-w-4xl mx-auto my-12 p-8 bg-white rounded-xl shadow-lg">
+    <h2 class="text-3xl mb-6 text-center">Emergency Contacts</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <a href="tel:100" class="p-4 bg-red-100 rounded-lg shadow hover:shadow-lg flex justify-center items-center">Police: 100 <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class="call-icon"></a>
+      <a href="tel:102" class="p-4 bg-green-100 rounded-lg shadow hover:shadow-lg flex justify-center items-center">Ambulance: 102 <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class="call-icon"></a>
+      <a href="tel:1363" class="p-4 bg-blue-100 rounded-lg shadow hover:shadow-lg flex justify-center items-center">Tourist Helpline: 1363 <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" class="call-icon"></a>
+    </div>
+  </section>
+
+  <script>
+  
+    const sosBtn = document.getElementById('sos-btn');
+    const sosSound = document.getElementById('sos-sound');
+    const phoneInput = document.getElementById('phone');
+    const issueType = document.getElementById('issue-type');
+    const description = document.getElementById('description');
+
+    issueType.addEventListener('change', () => {
+      if (issueType.value === 'Other') {
+        description.classList.remove('hidden');
+      } else {
+        description.classList.add('hidden');
+      }
+    });
+
+    phoneInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '');
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5MTk-4actUrdjNP5eqwJvjWDdm86Uhe0",
+      authDomain: "hack-odisha-c3159.firebaseapp.com",
+      databaseURL: "https://hack-odisha-c3159-default-rtdb.firebaseio.com",
+      projectId: "hack-odisha-c3159",
+      storageBucket: "hack-odisha-c3159.firebasestorage.app",
+      messagingSenderId: "745109721356",
+      appId: "1:745109721356:web:9cb78e4fce74c44d13f929",
+      measurementId: "G-KD2NCGYNK6"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+    sosBtn.addEventListener('click', () => {
+      sosSound.play();
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            const sosData = {
+              latitude: lat,
+              longitude: lon,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp() // Use server time for accuracy
+            };
+
+            db.collection('sos_alerts').add(sosData)
+              .then(() => {
+                alert(`🚨 SOS Alert Sent & Location Logged!\nYour location:\nLatitude: ${lat}\nLongitude: ${lon}\nAuthorities are being notified.`);
+              })
+              .catch((error) => {
+                console.error("Error logging SOS alert: ", error);
+                alert(`🚨 SOS Alert Sent (but location failed to log)!\nYour location:\nLatitude: ${lat}\nLongitude: ${lon}`);
+              });
+          },
+          (error) => {
+            if (error.code === error.PERMISSION_DENIED) {
+              alert("⚠️ Location permission denied! We cannot log your location.");
+            } else {
+              alert("🚨 SOS Alert Sent! Unable to fetch location.");
+            }
+          }
+        );
+      } else {
+        alert("🚨 SOS Alert Sent! Geolocation not supported by this browser.");
+      }
+    });
+
+
+    const reportForm = document.getElementById('report-form');
+    reportForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const issue = document.getElementById('issue-type').value;
+      let issueDescription = document.getElementById('description').value;
+      if (issue !== 'Other') { issueDescription = issue; }
+
+      const reportData = {
+        name: name,
+        phone: phone,
+        issue: issue,
+        description: issueDescription,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      };
+
+      db.collection('reports').add(reportData)
+        .then(() => {
+          alert('✅ Report submitted successfully!');
+          reportForm.reset();
+          document.getElementById('description').classList.add('hidden');
+        })
+        .catch((error) => {
+          alert('❌ An error occurred submitting the report. Please try again.');
+          console.error("Error writing document: ", error);
+        });
+    });
+
+ 
+  </script>
+
+</body>
+</html>
