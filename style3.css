@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libertinus+Serif+Display&family=Lugrasimo&family=Oooh+Baby&family=Poppins&family=Saira:ital,wght@0,100..900;1,100..900&family=Trade+Winds&display=swap');
+
+
 body {
 
     background-image: url('https://media.istockphoto.com/id/1430878163/vector/distressed-black-texture.jpg?s=612x612&w=0&k=20&c=D0Ammw7W2D9RxlZfDCU4XsHCqqNE___ES-FGCkMXRU4=');
@@ -188,7 +192,7 @@ nav a {
     text-decoration: wavy;
     font-weight: 600;
     font-size: 1.1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Saira", sans-serif;
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
 }
@@ -603,4 +607,30 @@ nav:hover {
         position: static;
         box-shadow: none;
     }
+}
+
+.nav-icon{
+    font-family:"Saira", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+h1{
+    font-family: "Oooh Baby", cursive;
+    font-size: xx-large;
+    font-weight: 800;
+  font-style: normal;
+    color: #fbcf0d;
+}
+
+.new{
+    font-family: "Trade Winds", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.new1{
+    font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

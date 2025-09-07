@@ -1,234 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Culture of Odisha</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="culture.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
+
 <body class="text-gray-900 font-poppins">
 
-  
-     <nav>
-        <div class="nav-logo">
-            <img src="https://png.pngtree.com/png-vector/20230327/ourmid/pngtree-odisha-day-utkal-divas-foundation-vector-png-image_6671119.png" alt="TourOdisha Logo">
-            <span>TourOdisha</span>
+
+  <nav>
+    <div class="nav-logo">
+      <img
+        src="https://png.pngtree.com/png-vector/20230327/ourmid/pngtree-odisha-day-utkal-divas-foundation-vector-png-image_6671119.png"
+        alt="TourOdisha Logo">
+      <span class="new" style="font-size: 20px;">TourOdisha</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+
+      <div class="search-bar">
+        <span class="nav-icon material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search...">
+      </div>
+      <a href="#favorites" class="nav-icon">❤️ Favorites</a>
+      <div class="dropdown">
+        <span class="nav-icon lang">🌐 Language</span>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">Hindi</a>
+          <a href="#">Odia</a>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+      </div>
+      <a href="/login" id="login-link" class="nav-icon">👤 Login</a>
+      <button id="logout-button" class="nav-icon hidden bg-transparent border-none cursor-pointer">🚪 Logout</button>
+      <a href="/home">🏠 Home</a>
+      <div class="dropdown">
+        <div class="more-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="nav-links">
-           
-            <div class="search-bar">
-                <span class="nav-icon">🔍</span>
-                <input type="text" placeholder="Search...">
-            </div>
-            <a href="#favorites" class="nav-icon">❤️ Favorites</a>
-            <div class="dropdown">
-                <span class="nav-icon">🌐 Language</span>
-                <div class="dropdown-content">
-                    <a href="#">English</a>
-                    <a href="#">Hindi</a>
-                    <a href="#">Odia</a>
-                </div>
-            </div>
-            <a href="/login" id="login-link" class="nav-icon">👤 Login</a>
-            <button id="logout-button" class="nav-icon hidden bg-transparent border-none cursor-pointer">🚪 Logout</button>
-            <a href="/home">🏠 Home</a>
-            <div class="dropdown">
-                <div class="more-menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="dropdown-content">
-                   
-                    
-                    
-                    <a href="/Culture">Culture</a>
-                    <a href="/heritage">Heritage</a>
-                    <a href="/wildlife">Wildlife</a>
-                    
-                    <a href="/safety">Tourist Support</a>
-                    <a href="/contactus">Contact us</a>
-                </div>
-            </div>
+        <div class="dropdown-content">
+
+
+
+          <a href="/Culture">Culture</a>
+          <a href="/heritage">Heritage</a>
+          <a href="/wildlife">Wildlife</a>
+
+          <a href="/safety">Tourist Support</a>
+          <a href="/contactus">Contact us</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
 
   <section class="hero">
     <div class="overlay"></div>
-    <h1 class="title">Culture of Odisha</h1>
-    <p class="subtitle">History • Dance • Music • Traditions</p>
+    <h1 class="title new">Culture of Odisha</h1>
+    <p class="subtitle new1">History • Dance • Music • Traditions</p>
   </section>
 
   <section class="content reveal">
-    <h2>🕰️ Glorious History</h2>
+    <h2 class="new">🕰️ Glorious History</h2>
     <p>
-      Odisha has a rich history dating back over 2000 years. The land of Kalinga 
-      witnessed the great Kalinga War which transformed Emperor Ashoka. 
-      The state is home to ancient temples like Konark Sun Temple and Jagannath Temple 
+      Odisha has a rich history dating back over 2000 years. The land of Kalinga
+      witnessed the great Kalinga War which transformed Emperor Ashoka.
+      The state is home to ancient temples like Konark Sun Temple and Jagannath Temple
       that reflect the architectural and cultural excellence of the region.
     </p>
   </section>
 
   <section class="grid reveal">
-    <h2>💃 Famous Dance Forms</h2>
+    <h2 class="new">💃 Famous Dance Forms</h2>
     <div class="card">
       <img src="https://media.tenor.com/JSOsfstoVP8AAAAM/indian-raga-dancing.gif" alt="Odissi Dance">
       <div class="card-info">
-        <h3>Odissi</h3>
+        <h3 class="new1">Odissi</h3>
         <p>The classical dance form rooted in temple traditions of Puri & Bhubaneswar.</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-68346150/68346150.jpg" alt="Gotipua Dance">
+      <img src="https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-68346150/68346150.jpg"
+        alt="Gotipua Dance">
       <div class="card-info">
-        <h3>Gotipua</h3>
+        <h3 class="new1">Gotipua</h3>
         <p>Performed by young boys dressed as women, precursor to Odissi dance. Famous in Raghurajpur.</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://img1.wsimg.com/isteam/ip/35bbe016-6c1a-42ae-8e23-be923465a063/Screenshot%20(45).png" alt="Chhau Dance">
+      <img src="https://img1.wsimg.com/isteam/ip/35bbe016-6c1a-42ae-8e23-be923465a063/Screenshot%20(45).png"
+        alt="Chhau Dance">
       <div class="card-info">
-        <h3>Mayurbhanj Chhau</h3>
+        <h3 class="new1">Mayurbhanj Chhau</h3>
         <p>A martial art-based dance, known for its vigor and masks. Popular in Mayurbhanj district.</p>
       </div>
     </div>
   </section>
 
-<section class="grid reveal">
-  <h2>🎶 Music & Songs of Odisha</h2>
+  <section class="grid reveal">
+    <h2 class="new">🎶 Music & Songs of Odisha</h2>
 
-  <div class="card">
-    <img src="https://thumbs.dreamstime.com/b/group-classical-odissi-dancers-performing-odissi-dance-stage-konark-temple-odisha-india-odissi-dance-also-known-as-155047464.jpg" alt="Odissi Music">
-    <div class="card-info">
-      <h3>Odissi Classical Music</h3>
-      <p>
-        One of India’s classical music forms, Odissi blends ragas and talas.  
-        Rooted in Jagannath temple traditions, famous in **Puri & Bhubaneswar**.
-      </p>
+    <div class="card">
+      <img
+        src="https://thumbs.dreamstime.com/b/group-classical-odissi-dancers-performing-odissi-dance-stage-konark-temple-odisha-india-odissi-dance-also-known-as-155047464.jpg"
+        alt="Odissi Music">
+      <div class="card-info">
+        <h3 class="new1">Odissi Classical Music</h3>
+        <p>
+          One of India’s classical music forms, Odissi blends ragas and talas.
+          Rooted in Jagannath temple traditions, famous in **Puri & Bhubaneswar**.
+        </p>
+      </div>
     </div>
-  </div>
 
-  
-  <div class="card">
-    <img src="https://s1.dmcdn.net/v/VhjVS1b_XpovD8TDg/x1080" alt="Dalkhai Song">
-    <div class="card-info">
-      <h3>Dalkhai Folk Songs</h3>
-      <p>
-        Energetic group songs sung by women during festivals like Nuakhai.  
-        Popular in **Sambalpur, Balangir, Kalahandi**.
-      </p>
+
+    <div class="card">
+      <img src="https://s1.dmcdn.net/v/VhjVS1b_XpovD8TDg/x1080" alt="Dalkhai Song">
+      <div class="card-info">
+        <h3 class="new1">Dalkhai Folk Songs</h3>
+        <p>
+          Energetic group songs sung by women during festivals like Nuakhai.
+          Popular in **Sambalpur, Balangir, Kalahandi**.
+        </p>
+      </div>
     </div>
-  </div>
 
 
-  <div class="card">
-    <img src="https://i.ytimg.com/vi/q8ONndDSZCw/hq720.jpg?sqp=-oaymwExCK4FEIIDSFryq4qpAyMIARUAAIhCGAHwAQH4AdQGgALgA4oCDAgAEAEYfyAsKE0wDw==&rs=AOn4CLAkjcB9tghBD44jpAUEmFR5gMuuzA" alt="Sambalpuri Music">
-    <div class="card-info">
-      <h3>Sambalpuri Folk</h3>
-      <p>
-        Famous for its rhythmic beats & lively lyrics, often with Dhol & Nishan.  
-        Thrives in **Western Odisha (Sambalpur, Bargarh)**.
-      </p>
+    <div class="card">
+      <img
+        src="https://i.ytimg.com/vi/q8ONndDSZCw/hq720.jpg?sqp=-oaymwExCK4FEIIDSFryq4qpAyMIARUAAIhCGAHwAQH4AdQGgALgA4oCDAgAEAEYfyAsKE0wDw==&rs=AOn4CLAkjcB9tghBD44jpAUEmFR5gMuuzA"
+        alt="Sambalpuri Music">
+      <div class="card-info">
+        <h3 class="new1">Sambalpuri Folk</h3>
+        <p>
+          Famous for its rhythmic beats & lively lyrics, often with Dhol & Nishan.
+          Thrives in **Western Odisha (Sambalpur, Bargarh)**.
+        </p>
+      </div>
     </div>
-  </div>
 
-  <audio autoplay loop>
-  <source src="odissi-flute.mp3" type="audio/mpeg">
-</audio>
+    <audio autoplay loop>
+      <source src="odissi-flute.mp3" type="audio/mpeg">
+    </audio>
 
-</section>
+  </section>
 
 
 
   <section class="grid reveal">
-    <h2>🎭 Traditions & Festivals</h2>
+    <h2 class="new">🎭 Traditions & Festivals</h2>
     <div class="card">
-      <img src="https://t3.ftcdn.net/jpg/05/41/13/84/360_F_541138479_0ZyLOAZxh5lNndsAcsLdVphWKht4icgy.jpg" alt="Rath Yatra">
+      <img src="https://t3.ftcdn.net/jpg/05/41/13/84/360_F_541138479_0ZyLOAZxh5lNndsAcsLdVphWKht4icgy.jpg"
+        alt="Rath Yatra">
       <div class="card-info">
-        <h3>Rath Yatra</h3>
+        <h3 class="new1">Rath Yatra</h3>
         <p>The grand chariot festival of Lord Jagannath, celebrated in Puri with millions of devotees.</p>
       </div>
     </div>
     <div class="card">
       <img src="https://www.bunkarvalley.com/wp-content/uploads/2025/05/Pala-and-Daskathia.jpg" alt="Pala Tradition">
       <div class="card-info">
-        <h3>Pala & Daskathia</h3>
+        <h3 class="new1">Pala & Daskathia</h3>
         <p>Storytelling traditions blending music and drama, popular in rural Odisha.</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://t3.ftcdn.net/jpg/03/57/19/38/360_F_357193851_FmRon0CY9kNT1n304jWxsfO8P6UlXc3d.jpg" alt="Chhau Festival">
+      <img src="https://t3.ftcdn.net/jpg/03/57/19/38/360_F_357193851_FmRon0CY9kNT1n304jWxsfO8P6UlXc3d.jpg"
+        alt="Chhau Festival">
       <div class="card-info">
-        <h3>Chhau Festival</h3>
+        <h3 class="new1">Chhau Festival</h3>
         <p>A vibrant festival showcasing Chhau dance with masks and folk theatre. Celebrated in Baripada.</p>
       </div>
     </div>
   </section>
 
-  
+
   <footer>
     <p>© 2025 TourOdisha | Celebrating the Culture & Heritage of Odisha</p>
   </footer>
 
   <script src="culture.js"></script>
-    <script src="/script.js"></script>
-  
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyD5MTk-4actUrdjNP5eqwJvjWDdm86Uhe0", 
-            authDomain: "hack-odisha-c3159.firebaseapp.com",
-            databaseURL: "https://hack-odisha-c3159-default-rtdb.firebaseio.com",
-            projectId: "hack-odisha-c3159",
-            storageBucket: "hack-odisha-c3159.firebasestorage.app",
-            messagingSenderId: "745109721356",
-            appId: "1:745109721356:web:9cb78e4fce74c44d13f929",
-            measurementId: "G-KD2NCGYNK6"
-        };
+  <script src="/script.js"></script>
 
-        
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5MTk-4actUrdjNP5eqwJvjWDdm86Uhe0",
+      authDomain: "hack-odisha-c3159.firebaseapp.com",
+      databaseURL: "https://hack-odisha-c3159-default-rtdb.firebaseio.com",
+      projectId: "hack-odisha-c3159",
+      storageBucket: "hack-odisha-c3159.firebasestorage.app",
+      messagingSenderId: "745109721356",
+      appId: "1:745109721356:web:9cb78e4fce74c44d13f929",
+      measurementId: "G-KD2NCGYNK6"
+    };
 
-        const loginLink = document.getElementById('login-link');
-        const logoutButton = document.getElementById('logout-button');
 
-        
-        auth.onAuthStateChanged(user => {
-            if (user) {
-                
-                loginLink.classList.add('hidden');       
-                logoutButton.classList.remove('hidden'); 
-            } else {
-                loginLink.classList.remove('hidden');    
-                logoutButton.classList.add('hidden');      
-            }
-        });
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
 
-        logoutButton.addEventListener('click', () => {
-            auth.signOut().then(() => {
-                alert('You have been successfully logged out.');
-                window.location.href = '/home'; 
-            }).catch((error) => {
-                alert(`Error during logout: ${error.message}`);
-            });
-        });
+    const loginLink = document.getElementById('login-link');
+    const logoutButton = document.getElementById('logout-button');
 
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+
+        loginLink.classList.add('hidden');
+        logoutButton.classList.remove('hidden');
+      } else {
+        loginLink.classList.remove('hidden');
+        logoutButton.classList.add('hidden');
+      }
+    });
+
+    logoutButton.addEventListener('click', () => {
+      auth.signOut().then(() => {
+        alert('You have been successfully logged out.');
+        window.location.href = '/home';
+      }).catch((error) => {
+        alert(`Error during logout: ${error.message}`);
+      });
+    });
+
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
+
 </html>
